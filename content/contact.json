@@ -11,6 +11,12 @@
       "type": "phone"
     },
     {
+      "label": "Email / WhatsApp",
+      "value": "contact@firstfoodsafety.com",
+      "href": "mailto:contact@firstfoodsafety.com",
+      "type": "email"
+    },
+    {
       "label": "Contact Person",
       "value": "Mahrukh Sundas — Business Manager",
       "type": "person"
