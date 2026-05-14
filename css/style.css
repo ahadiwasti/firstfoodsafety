@@ -341,7 +341,24 @@ section { padding: 100px 5vw; }
 .form-submit { background: var(--teal); color: white; border: none; padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 500; cursor: pointer; width: 100%; transition: all 0.25s; display: flex; align-items: center; justify-content: center; gap: 8px; }
 .form-submit:hover { background: var(--teal-light); }
 .form-submit.sent { background: var(--accent); color: var(--dark); }
-
+.form-submit {
+  height: 52px;
+  min-height: 52px;
+  max-height: 52px;
+}
+.form-submit svg {
+  width: 16px !important;
+  height: 16px !important;
+  flex-shrink: 0;
+}
+.form-group input:invalid,
+.form-group select:invalid {
+  border-color: rgba(2,128,144,0.25);
+}
+.form-group input:user-invalid,
+.form-group select:user-invalid {
+  border-color: #e05252;
+}
 /* ─── FOOTER ─── */
 footer { background: var(--dark2); border-top: 1px solid rgba(2,128,144,0.2); padding: 28px 5vw; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 .footer-brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }

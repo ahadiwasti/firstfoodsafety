@@ -240,12 +240,29 @@ function initForm() {
   const btn = document.getElementById('form-submit');
   if (!btn) return;
   btn.addEventListener('click', () => {
-    btn.textContent = '✓ Message Sent!';
-    btn.classList.add('sent');
+    btn.disabled = true;
+    btn.style.opacity = '0.8';
+    btn.style.cursor = 'not-allowed';
+    btn.innerHTML = `
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="width:16px;height:16px;flex-shrink:0">
+        <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+      </svg>
+      Sending...`;
     setTimeout(() => {
-      btn.innerHTML = `${ICONS.send} Send Message`;
-      btn.classList.remove('sent');
-    }, 3000);
+      btn.innerHTML = `✓ Message Sent!`;
+      btn.classList.add('sent');
+      setTimeout(() => {
+        btn.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" style="width:16px;height:16px;flex-shrink:0">
+            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+          </svg>
+          Send Message`;
+        btn.classList.remove('sent');
+        btn.disabled = false;
+        btn.style.opacity = '';
+        btn.style.cursor = '';
+      }, 3000);
+    }, 1500);
   });
 }
 
