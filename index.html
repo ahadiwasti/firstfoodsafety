@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>First Food Safety — Certified Food Safety Consultants</title>
+  <meta name="description" content="Professional food safety consultancy. DM Check, GMP-FSMS, HACCP implementation and monthly hygiene management for restaurants.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' fill='%23028090'/%3E%3Cpath fill='white' d='M12 2L4 6v5c0 4.55 3.15 8.8 8 10 4.85-1.2 8-5.45 8-10V6l-8-4zm-1.5 11.5l-3-3 1.06-1.06 1.94 1.93 4.44-4.43 1.06 1.06-5.5 5.5z'/%3E%3C/svg%3E">
-  <meta name="description" content="Dubai-based food safety consultancy. DM Check implementation, GMP-FSMS programs, and monthly hygiene management for restaurants.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-  <!-- ─── NAV ─── -->
+  <!-- NAV -->
   <nav id="navbar">
     <a href="#hero" class="nav-logo">
       <div class="nav-logo-icon">
@@ -43,7 +43,7 @@
     <a href="#contact">Contact</a>
   </div>
 
-  <!-- ─── HERO ─── -->
+  <!-- HERO -->
   <section id="hero">
     <div class="hero-grid-bg"></div>
     <div class="hero-glow"></div>
@@ -55,7 +55,7 @@
     <div class="hero-stats" id="hero-stats"></div>
   </section>
 
-  <!-- ─── ABOUT ─── -->
+  <!-- ABOUT -->
   <section id="about">
     <div class="about-grid">
       <div class="about-visual reveal">
@@ -72,7 +72,7 @@
     </div>
   </section>
 
-  <!-- ─── SERVICES ─── -->
+  <!-- SERVICES -->
   <section id="services">
     <div class="services-header reveal" id="services-header">
       <div class="section-loading"><div class="loader"></div></div>
@@ -80,12 +80,12 @@
     <div class="services-grid" id="services-grid"></div>
   </section>
 
-  <!-- ─── TRUST BAR ─── -->
+  <!-- TRUST BAR -->
   <div class="trust-bar">
     <div class="trust-bar-inner" id="trust-bar-inner"></div>
   </div>
 
-  <!-- ─── PROCESS ─── -->
+  <!-- PROCESS -->
   <section id="process">
     <div style="max-width:560px; margin-bottom:52px;" class="reveal" id="process-header">
       <div class="section-loading"><div class="loader"></div></div>
@@ -93,7 +93,7 @@
     <div class="process-steps" id="process-steps"></div>
   </section>
 
-  <!-- ─── CASE STUDIES ─── -->
+  <!-- CASE STUDIES -->
   <section id="cases">
     <div style="max-width:560px; margin-bottom:52px;" class="reveal" id="cases-header">
       <div class="section-loading"><div class="loader"></div></div>
@@ -101,7 +101,7 @@
     <div class="cases-grid" id="cases-grid"></div>
   </section>
 
-  <!-- ─── PRICING ─── -->
+  <!-- PRICING -->
   <section id="pricing">
     <div class="pricing-header reveal" id="pricing-header">
       <div class="section-loading"><div class="loader"></div></div>
@@ -109,7 +109,7 @@
     <div class="pricing-grid" id="pricing-grid"></div>
   </section>
 
-  <!-- ─── CONTACT ─── -->
+  <!-- CONTACT -->
   <section id="contact">
     <div class="contact-grid">
       <div class="contact-info reveal">
@@ -117,40 +117,42 @@
         <div class="contact-cards" id="contact-cards"></div>
       </div>
       <div class="contact-form reveal">
-        <h3>Send Us a Message</h3>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Your Name</label>
-            <input type="text" placeholder="Restaurant Manager">
-          </div>
-          <div class="form-group">
-            <label>Phone / WhatsApp</label>
-            <input type="tel" placeholder="+971 XX XXX XXXX">
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Restaurant Name</label>
-          <input type="text" placeholder="Your Restaurant Name">
-        </div>
-        <div class="form-group">
-          <label>Service You're Interested In</label>
-          <select id="contact-form-services">
-            <option value="">Loading...</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Message (Optional)</label>
-          <textarea placeholder="Tell us about your restaurant and any specific requirements..."></textarea>
-        </div>
-        <button class="form-submit" id="form-submit">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-          Send Message
-        </button>
+  <h3>Send Us a Message</h3>
+  <form action="https://formspree.io/f/xkoyloky" method="POST">
+    <div class="form-row">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" name="name" placeholder="Restaurant Manager" required>
       </div>
+      <div class="form-group">
+        <label>Phone / WhatsApp</label>
+        <input type="tel" name="phone" placeholder="+971 XX XXX XXXX">
+      </div>
+    </div>
+    <div class="form-group">
+      <label>Restaurant Name</label>
+      <input type="text" name="restaurant" placeholder="Your Restaurant Name">
+    </div>
+    <div class="form-group">
+      <label>Service You're Interested In</label>
+      <select id="contact-form-services" name="service">
+        <option value="">Loading...</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Message (Optional)</label>
+      <textarea name="message" placeholder="Tell us about your restaurant and any specific requirements..."></textarea>
+    </div>
+    <button type="submit" class="form-submit" id="form-submit">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+      Send Message
+    </button>
+  </form>
+</div>
     </div>
   </section>
 
-  <!-- ─── FOOTER ─── -->
+  <!-- FOOTER -->
   <footer>
     <a href="#hero" class="footer-brand">
       <div class="footer-brand-icon">
@@ -158,7 +160,7 @@
       </div>
       <div class="footer-brand-text">FIRST FOOD SAFETY</div>
     </a>
-    <div class="footer-copy">© 2025 First Food Safety. Dubai Municipality Certified.</div>
+    <div class="footer-copy">© 2026 First Food Safety. All rights reserved.</div>
     <div class="footer-links">
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>

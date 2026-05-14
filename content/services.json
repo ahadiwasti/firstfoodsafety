@@ -1,6 +1,6 @@
 {
   "tag": "What We Offer",
-  "headline": "Three Services.",
+  "headline": "Five Services.",
   "headline_accent": "Total Coverage.",
   "subtext": "From one-time setups to ongoing monthly oversight — we have the right service for every stage of your compliance journey.",
   "services": [
@@ -8,49 +8,86 @@
       "number": "01",
       "title": "DM Check Implementation",
       "type": "One-time Setup",
-      "description": "Full setup of the official Dubai Municipality DM Check digital monitoring platform — configured to your restaurant's specific workflows and operations.",
+      "description": "Full setup of the official DM Check digital monitoring platform — configured to your restaurant's specific workflows and operations.",
       "features": [
         "Readiness assessment & system registration",
         "People, Supplier & System Management setup",
         "Process monitoring: cooking, storage, receiving",
         "Food delivery & equipment safety checks",
         "Basic & advanced (PIC) staff training",
+        "Inspection prep & readiness guidance",
+        "Compliance tracking setup",
         "1 month follow-up support included"
       ],
-      "price": "AED 15,000",
-      "price_note": "per location"
+      "cta": "Get a Quote"
     },
     {
       "number": "02",
       "title": "GMP-FSMS Program",
       "type": "One-time Setup",
-      "description": "A comprehensive Good Manufacturing Practices program that establishes the complete operational foundation your kitchen needs before HACCP implementation.",
+      "description": "A comprehensive Good Manufacturing Practices program that establishes the complete operational foundation your kitchen needs — covering facilities, people, processes and documentation.",
       "features": [
         "Full premises GAP report & assessment",
         "Facility: floors, walls, lighting, drainage",
         "Temperature control & water quality review",
         "Staff washroom & chemicals storage audit",
         "16 food safety SOPs documented",
-        "Detailed PIC report after each visit"
+        "Regulatory updates & requirement alignment",
+        "Detailed PIC report after each visit",
+        "Documentation support & record keeping"
       ],
-      "price": "AED 5,500",
-      "price_note": "per outlet"
+      "cta": "Get a Quote"
     },
     {
       "number": "03",
+      "title": "HACCP Manual Creation & Implementation",
+      "type": "One-time Setup",
+      "description": "End-to-end development and implementation of a fully customised HACCP manual — built around your menu, kitchen layout, and operational processes to meet international food safety standards.",
+      "features": [
+        "Hazard analysis across all menu items",
+        "Critical Control Point (CCP) identification",
+        "Custom HACCP plan & monitoring procedures",
+        "Corrective action & verification procedures",
+        "Full HACCP manual documented & printed",
+        "Staff briefing on HACCP principles",
+        "Record keeping templates provided",
+        "Ongoing regulatory alignment support"
+      ],
+      "cta": "Get a Quote"
+    },
+    {
+      "number": "04",
+      "title": "Monthly Audit & Training",
+      "type": "Ongoing Monthly",
+      "description": "A focused monthly service covering internal audits and staff training — ideal for establishments that have their systems in place and need consistent oversight to stay compliant.",
+      "features": [
+        "Monthly internal compliance audit",
+        "Detailed audit report with findings",
+        "Corrective action plan & follow-up",
+        "Food handler training sessions",
+        "Personal hygiene & sanitation refreshers",
+        "Allergen awareness training",
+        "Inspection readiness checks",
+        "Compliance score tracking"
+      ],
+      "cta": "Get a Quote"
+    },
+    {
+      "number": "05",
       "title": "Monthly Hygiene Management",
       "type": "Ongoing Monthly",
-      "description": "Continuous compliance oversight with monthly audits, staff training, and corrective action planning — so your restaurant never falls behind on municipality standards.",
+      "description": "Our most comprehensive ongoing service — full hygiene and compliance management covering audits, training, supplier oversight, documentation and food safety culture development across your team.",
       "features": [
         "Monthly internal audit & gap tracking",
         "Staff training & hygiene refreshers",
+        "Food safety culture development",
         "Allergen & cross-contamination management",
         "Supplier & pest control evaluation",
         "Crisis & recall management protocols",
-        "Municipality report compliance review"
+        "Ongoing regulatory updates & guidance",
+        "Full documentation support & record keeping"
       ],
-      "price": "AED 3,000",
-      "price_note": "per outlet / month"
+      "cta": "Get a Quote"
     }
   ]
 }

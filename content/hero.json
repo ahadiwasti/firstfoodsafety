@@ -1,15 +1,37 @@
 {
-  "tag": "Dubai Municipality Certified",
-  "headline": "Food Safety &",
-  "headline_accent": "Compliance Experts",
-  "subtext": "We help Dubai restaurants achieve full municipality compliance — from DM Check implementation and GMP-FSMS programs to ongoing monthly hygiene management.",
-  "btn_primary": "Our Services",
+  "tag": "Certified. Compliant. Inspection Ready",
+  "headline": "Built for",
+  "headline_accent": "Food Safety Excellence",
+  "subtext": "We understand food safety regulations inside out and we make sure your establishment meets every requirement, consistently. Whether you're setting up for the first time, building your HACCP foundation, or maintaining ongoing compliance, our certified consultants work hands-on with your team at every step.",
+  "card_title": "First Food Safety",
+  "card_body": "A professional food safety consultancy dedicated to helping restaurants and food establishments achieve full regulatory compliance. We work hands-on with your team so your business stays inspection-ready every day.",
+ "btn_primary": "Our Services",
   "btn_primary_href": "#services",
   "btn_secondary": "Book a Consultation",
   "btn_secondary_href": "#contact",
+  "badges": [
+    "DM Check Certified",
+    "GMP-FSMS Experts",
+    "Staff Training",
+    "Monthly Audits"
+  ],
   "stats": [
-    { "number": "50+",  "label": "Restaurants Served" },
-    { "number": "100%", "label": "Compliance Rate" },
-    { "number": "3",    "label": "Service Lines" }
+    { "number": "15+",  "label": "Restaurants" },
+    { "number": "100%", "label": "Pass Rate" },
+    { "number": "5",    "label": "Services" }
+  ],
+  "values": [
+    {
+      "title": "Compliance First",
+      "body": "Every recommendation we make is grounded in current food safety regulations and international industry best practices."
+    },
+    {
+      "title": "Staff Empowerment",
+      "body": "We train your entire team — not just your PIC — so compliance becomes part of everyday operations."
+    },
+    {
+      "title": "Measurable Results",
+      "body": "From inspection scores to audit reports — every engagement produces documented, trackable outcomes."
+    }
   ]
 }

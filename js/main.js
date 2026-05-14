@@ -14,7 +14,7 @@ const ICONS = {
   send:    `<svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>`,
 };
 
-const SERVICE_ICONS = ['shield', 'doc', 'chart'];
+const SERVICE_ICONS = ['shield', 'doc', 'award', 'chart', 'gear'];
 const PROCESS_ICONS = ['search', 'gear', 'people', 'chart'];
 const VALUE_ICONS   = ['check', 'people', 'chart'];
 const CONTACT_ICONS = { phone: 'phone', person: 'people', location: 'location' };
@@ -31,8 +31,14 @@ function renderHero(d) {
     <h1 class="hero-h1">${d.headline}<em>${d.headline_accent}</em></h1>
     <p class="hero-sub">${d.subtext}</p>
     <div class="hero-btns">
-      <a href="${d.btn_primary_href}" class="btn-primary">${ICONS.check} ${d.btn_primary}</a>
-      <a href="${d.btn_secondary_href}" class="btn-outline">${d.btn_secondary}</a>
+     <a href="${d.btn_primary_href}" class="btn-primary">
+  ${d.btn_primary}
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+</a>
+<a href="${d.btn_secondary_href}" class="btn-outline">
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+  ${d.btn_secondary}
+</a>
     </div>`;
   document.getElementById('hero-stats').innerHTML = d.stats.map(s => `
     <div class="stat-card">
@@ -77,11 +83,7 @@ function renderServices(d) {
         <p>${s.description}</p>
         <ul class="service-features">${s.features.map(f => `<li>${f}</li>`).join('')}</ul>
         <div class="service-price-tag">
-          <div>
-            <div class="service-price">${s.price}</div>
-            <div class="service-price-note">${s.price_note}</div>
-          </div>
-          <a href="#contact" class="service-cta">Get Started →</a>
+          <a href="#contact" class="service-cta-full">${s.cta} →</a>
         </div>
       </div>
     </div>`).join('');
@@ -151,14 +153,11 @@ function renderPricing(d) {
         <h3>${p.title}</h3>
         <p>${p.subtitle}</p>
       </div>
-      <div class="pricing-card-price">
-        <div class="price-amount">${p.price}</div>
-        <div class="price-period">${p.period}</div>
-      </div>
+   
       <ul class="pricing-features">
         ${p.features.map(f => `<li>${ICONS.check}<span>${f}</span></li>`).join('')}
       </ul>
-      <div class="pricing-cta"><a href="#contact">Get Started</a></div>
+      <div class="pricing-cta"><a href="#contact">Get a Quote</a></div>
     </div>`).join('');
 }
 
@@ -184,9 +183,35 @@ function renderContact(d) {
     d.form_services.map(s => `<option>${s}</option>`).join('');
 }
 
+function renderTrustBar() {
+  const items = [
+    { icon: ICONS.shield, label: 'DM Check',       highlight: 'Certified' },
+    { icon: ICONS.check,  label: 'GMP-FSMS',        highlight: 'Experts' },
+    { icon: ICONS.doc,    label: 'HACCP',            highlight: 'Implementation' },
+    { icon: ICONS.people, label: 'Staff',            highlight: 'Training' },
+    { icon: ICONS.chart,  label: 'Monthly',          highlight: 'Audits' },
+    { icon: ICONS.award,  label: 'Inspection',       highlight: 'Readiness' },
+    { icon: ICONS.gear,   label: 'Food Safety',      highlight: 'Culture' },
+    { icon: ICONS.check,  label: 'Compliance',       highlight: 'Tracking' },
+    { icon: ICONS.doc,    label: 'Documentation',    highlight: 'Support' },
+    { icon: ICONS.shield, label: 'Regulatory',       highlight: 'Updates' },
+  ];
+  const html = items.map(item => `
+    <div class="trust-item">
+      <div class="trust-item-icon">${item.icon}</div>
+      <div class="trust-item-text">${item.label} <span>${item.highlight}</span></div>
+    </div>`).join('');
+  const el = document.getElementById('trust-bar-inner');
+  if (el) el.innerHTML = `
+    <div class="trust-bar-set">${html}</div>
+    <div class="trust-bar-set" aria-hidden="true">${html}</div>`;
+}
+
 function initReveal() {
   const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); }
+    });
   }, { threshold: 0.1 });
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 }
@@ -247,30 +272,3 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
-
-// ─── TRUST BAR ───────────────────────────
-function renderTrustBar() {
-  const items = [
-    { icon: ICONS.shield, label: 'DM Check', highlight: 'Certified' },
-    { icon: ICONS.check,  label: 'GMP-FSMS', highlight: 'Experts' },
-    { icon: ICONS.doc,    label: 'HACCP', highlight: 'Implementation' },
-    { icon: ICONS.people, label: 'Staff', highlight: 'Training' },
-    { icon: ICONS.chart,  label: 'Monthly', highlight: 'Audits' },
-    { icon: ICONS.award,  label: 'Inspection', highlight: 'Readiness' },
-    { icon: ICONS.gear,   label: 'Food Safety', highlight: 'Culture' },
-    { icon: ICONS.check,  label: 'Compliance', highlight: 'Tracking' },
-    { icon: ICONS.doc,    label: 'Documentation', highlight: 'Support' },
-    { icon: ICONS.shield, label: 'Regulatory', highlight: 'Updates' },
-  ];
-
-  const html = items.map(item => `
-    <div class="trust-item">
-      <div class="trust-item-icon">${item.icon}</div>
-      <div class="trust-item-text">${item.label} <span>${item.highlight}</span></div>
-    </div>`).join('');
-
-  const el = document.getElementById('trust-bar-inner');
-  if (el) el.innerHTML = `
-    <div class="trust-bar-set">${html}</div>
-    <div class="trust-bar-set" aria-hidden="true">${html}</div>`;
-}
