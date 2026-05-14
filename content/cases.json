@@ -6,7 +6,7 @@
   "cases": [
     {
       "label": "Case Study 01",
-      "client": "Table4Two Group",
+      "client": "Multi-Outlet Restaurant",
       "location": "4 Outlets — Dubai, UAE",
       "service_badge": "DM Check",
       "badge_style": "teal",
@@ -14,15 +14,13 @@
       "approach": "Full readiness assessment, platform configuration per outlet workflow, PIC and food handler training, 1-month follow-up support across all locations.",
       "outcome": "All 4 outlets fully registered and operational on DM Check — with trained staff achieving complete municipality compliance and inspection readiness.",
       "tags": [
-        "Apollo – Palm Jumeirah",
-        "Za Za Slice – South Heights",
-        "Rascals Deli – Wasl Square",
-        "Rascals Bake House – Wasl Sq"
+        "DM Check",
+        "Staff Training"
       ]
     },
     {
       "label": "Case Study 02",
-      "client": "Island's Chippy",
+      "client": "Quick Service Restaurant",
       "location": "Dubai, UAE",
       "service_badge": "GMP + Hygiene",
       "badge_style": "accent",
