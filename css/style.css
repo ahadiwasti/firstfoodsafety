@@ -310,3 +310,66 @@ footer { background: var(--dark2); border-top: 1px solid rgba(2,128,144,0.2); pa
   .process-steps { grid-template-columns: 1fr; }
   section { padding: 70px 5vw; }
 }
+
+/* ─── SERVICES GRID 5-CARD LAYOUT ─── */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+.services-grid .service-card:nth-child(4) { grid-column: 1 / 2; }
+.services-grid .service-card:nth-child(5) { grid-column: 2 / 3; }
+
+/* ─── TRUST BAR ─── */
+.trust-bar {
+  background: var(--dark);
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.trust-bar-inner {
+  display: flex;
+  animation: marquee 28s linear infinite;
+  width: max-content;
+}
+.trust-bar-inner:hover { animation-play-state: paused; }
+.trust-bar-set {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  white-space: nowrap;
+}
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 22px 40px;
+  border-right: 1px solid rgba(2,128,144,0.2);
+  transition: background 0.25s;
+}
+.trust-item:hover { background: rgba(2,128,144,0.1); }
+.trust-item-icon {
+  width: 32px; height: 32px;
+  background: var(--teal);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.trust-item-icon svg { width: 16px; height: 16px; fill: white; }
+.trust-item-text {
+  font-size: 13px; font-weight: 500;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 0.3px;
+}
+.trust-item-text span {
+  color: var(--accent);
+  font-weight: 600;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (max-width: 768px) {
+  .services-grid .service-card:nth-child(4),
+  .services-grid .service-card:nth-child(5) { grid-column: auto; }
+}

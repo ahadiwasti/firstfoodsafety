@@ -238,6 +238,7 @@ async function init() {
     renderCases(cases);
     renderPricing(pricing);
     renderContact(contact);
+    renderTrustBar();
     setTimeout(initReveal, 50);
     initForm();
   } catch(e) {
@@ -246,3 +247,30 @@ async function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init);
+
+// ─── TRUST BAR ───────────────────────────
+function renderTrustBar() {
+  const items = [
+    { icon: ICONS.shield, label: 'DM Check', highlight: 'Certified' },
+    { icon: ICONS.check,  label: 'GMP-FSMS', highlight: 'Experts' },
+    { icon: ICONS.doc,    label: 'HACCP', highlight: 'Implementation' },
+    { icon: ICONS.people, label: 'Staff', highlight: 'Training' },
+    { icon: ICONS.chart,  label: 'Monthly', highlight: 'Audits' },
+    { icon: ICONS.award,  label: 'Inspection', highlight: 'Readiness' },
+    { icon: ICONS.gear,   label: 'Food Safety', highlight: 'Culture' },
+    { icon: ICONS.check,  label: 'Compliance', highlight: 'Tracking' },
+    { icon: ICONS.doc,    label: 'Documentation', highlight: 'Support' },
+    { icon: ICONS.shield, label: 'Regulatory', highlight: 'Updates' },
+  ];
+
+  const html = items.map(item => `
+    <div class="trust-item">
+      <div class="trust-item-icon">${item.icon}</div>
+      <div class="trust-item-text">${item.label} <span>${item.highlight}</span></div>
+    </div>`).join('');
+
+  const el = document.getElementById('trust-bar-inner');
+  if (el) el.innerHTML = `
+    <div class="trust-bar-set">${html}</div>
+    <div class="trust-bar-set" aria-hidden="true">${html}</div>`;
+}
