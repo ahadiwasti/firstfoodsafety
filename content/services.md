@@ -1,0 +1,49 @@
+---
+tag: What We Offer
+headline: Three Services.
+headline_accent: Total Coverage.
+subtext: From one-time setups to ongoing monthly oversight — we have the right service for every stage of your compliance journey.
+---
+
+services:
+- number: "01"
+  title: DM Check Implementation
+  type: One-time Setup
+  description: Full setup of the official Dubai Municipality DM Check digital monitoring platform — configured to your restaurant's specific workflows and operations.
+  features:
+    - Readiness assessment & system registration
+    - People, Supplier & System Management setup
+    - Process monitoring: cooking, storage, receiving
+    - Food delivery & equipment safety checks
+    - Basic & advanced (PIC) staff training
+    - 1 month follow-up support included
+  price: AED 15,000
+  price_note: per location
+
+- number: "02"
+  title: GMP-FSMS Program
+  type: One-time Setup
+  description: A comprehensive Good Manufacturing Practices program that establishes the complete operational foundation your kitchen needs before HACCP implementation.
+  features:
+    - Full premises GAP report & assessment
+    - Facility: floors, walls, lighting, drainage
+    - Temperature control & water quality review
+    - Staff washroom & chemicals storage audit
+    - 16 food safety SOPs documented
+    - Detailed PIC report after each visit
+  price: AED 5,500
+  price_note: per outlet
+
+- number: "03"
+  title: Monthly Hygiene Management
+  type: Ongoing Monthly
+  description: Continuous compliance oversight with monthly audits, staff training, and corrective action planning — so your restaurant never falls behind on municipality standards.
+  features:
+    - Monthly internal audit & gap tracking
+    - Staff training & hygiene refreshers
+    - Allergen & cross-contamination management
+    - Supplier & pest control evaluation
+    - Crisis & recall management protocols
+    - Municipality report compliance review
+  price: AED 3,000
+  price_note: per outlet / month
